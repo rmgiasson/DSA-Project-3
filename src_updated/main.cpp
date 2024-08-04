@@ -181,12 +181,14 @@ int main() {
             }
         }
     }
-
-
     file.close();
 
-
     topTenUnordered(unorderedFiltered, "pop");
+
+    cout << endl;
+
+    topTenOrdered(orderedFiltered, "pop");
+
 
 //    string x;
 //    cout << "Enter song lyrics to be analyzed: " << endl;

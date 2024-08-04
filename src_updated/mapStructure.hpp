@@ -49,6 +49,14 @@ public:
         return ans;
     }
 
+    map<string, int> getIndex() {
+        return genreIndex;
+    }
+
+    vector<map<string, int>> getWords() {
+        return genreWords;
+    }
+
     //Takes a genre as a parameter and returns the total number of words in the genre's songs.
     int getTotal(string genre){
         if(genreTotal[genreIndex[genre]] > 0) {
