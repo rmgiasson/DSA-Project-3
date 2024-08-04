@@ -12,7 +12,7 @@ private:
     //total number of words for each genre by index
     vector<int> genreTotal;
 
-    //stores maps for each genre that map words to their number of occurrences 
+    //stores maps for each genre that map words to their number of occurrences
     vector<map<string, int>> genreWords;
 
 public:

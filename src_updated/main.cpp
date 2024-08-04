@@ -2,9 +2,13 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <bits/stdc++.h>
+#include <algorithm>
 #include <vector>
 #include <set>
 #include "genrePredictor.hpp"
+#include "topTen.hpp"
+
 using namespace std;
 
 // The stopwords from ../resources/stopwords.txt are from the default stopwords list on https://www.ranks.nl/stopwords
@@ -180,8 +184,9 @@ int main() {
 
 
     file.close();
-    cout << ordered.getWordFreq("pop", "wow") << endl;
-    cout << unordered.getWordFreq("pop", "wow") << endl;
+
+
+    topTenUnordered(unorderedFiltered, "pop");
 
 //    string x;
 //    cout << "Enter song lyrics to be analyzed: " << endl;

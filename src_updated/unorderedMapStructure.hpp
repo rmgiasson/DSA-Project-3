@@ -58,6 +58,14 @@ public:
         }
     }
 
+    unordered_map<string, int> getIndex() {
+        return genreIndex;
+    }
+
+    vector<unordered_map<string, int>> getWords() {
+        return genreWords;
+    }
+
     //Takes a genre and a word as a parameter and returns the number of times that word was found in the genre's songs.
     int getWordCount(string genre, string word){
         if(genreWords[genreIndex[genre]][word] > 0) {
