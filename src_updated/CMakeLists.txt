@@ -3,7 +3,7 @@ project(DSA_Project_3)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(src)
+include_directories(src_updated)
 
 add_executable(DSA_Project_3
         src_updated/main.cpp
