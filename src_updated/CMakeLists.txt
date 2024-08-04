@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(src)
 
 add_executable(DSA_Project_3
-        src/main.cpp
-        src/mapStructure.hpp
-        src/unorderedMapStructure.hpp
-        src/genrePredictor.hpp
+        src_updated/main.cpp
+        src_updated/mapStructure.hpp
+        src_updated/unorderedMapStructure.hpp
+        src_updated/genrePredictor.hpp
 )
