@@ -11,4 +11,5 @@ add_executable(DSA_Project_3
         src_updated/unorderedMapStructure.hpp
         src_updated/genrePredictor.hpp
         src_updated/topTen.hpp
+        src_updated/wordPerGenre.hpp
 )

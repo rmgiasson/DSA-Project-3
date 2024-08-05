@@ -8,6 +8,7 @@
 #include <set>
 #include "genrePredictor.hpp"
 #include "topTen.hpp"
+#include "wordPerGenre.hpp"
 
 using namespace std;
 
@@ -183,11 +184,17 @@ int main() {
     }
     file.close();
 
-    topTenUnordered(unorderedFiltered, "pop");
+    // topTenUnordered(unorderedFiltered, "pop");
+    //
+    // cout << endl;
+    //
+    // topTenOrdered(orderedFiltered, "pop");
+
+    wordPerGenreUnordered(unordered, "the");
 
     cout << endl;
 
-    topTenOrdered(orderedFiltered, "pop");
+    wordPerGenreOrdered(ordered, "the");
 
 
 //    string x;

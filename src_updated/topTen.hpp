@@ -49,7 +49,7 @@ void topTenUnordered(UnorderedMapStructure umap, string genre) {
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(stop - start);
 
-    cout << "This took " << duration.count() << " milliseconds." << endl;
+    cout << "This function took " << duration.count() << " milliseconds." << endl;
 }
 
 void topTenOrdered(MapStructure omap, string genre) {
@@ -89,5 +89,5 @@ void topTenOrdered(MapStructure omap, string genre) {
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(stop - start);
 
-    cout << "This took " << duration.count() << " milliseconds." << endl;
+    cout << "This function took " << duration.count() << " milliseconds." << endl;
 }
