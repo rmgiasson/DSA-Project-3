@@ -10,7 +10,6 @@ add_executable(DSA_Project_3
         src_updated/mapStructure.hpp
         src_updated/unorderedMapStructure.hpp
         src_updated/genrePredictor.hpp
-        src_updated/test.cpp
         src_updated/genrePredictor.cpp
         src_updated/topTen.hpp
         src_updated/wordPerGenre.hpp
