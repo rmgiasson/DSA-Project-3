@@ -8,11 +8,6 @@
 #include <vector>
 using namespace std;
 
-//struct Song{
-//    vector<string> words;
-//    string genre;
-//};
-
 set<string> generateStopwords() {
     ifstream stopwords("../resources/stopwords.txt");
 
