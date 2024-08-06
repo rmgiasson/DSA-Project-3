@@ -33,3 +33,10 @@ map<string, map<string, double>> computeGenreVectorsOrdered(vector<Song>& songs,
 
 string determineGenreUnordered(string& inputLyrics, vector<Song>& songs, unordered_map<string, double>& idf);
 string determineGenreOrdered(string& inputLyrics, vector<Song>& songs, map<string, double>& idf);
+
+
+
+
+
+
+
