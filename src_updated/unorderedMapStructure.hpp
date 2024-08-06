@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -68,12 +70,11 @@ public:
     }
 
     //Takes a genre and a word as a parameter and returns the frequency of the word in the genre's songs.
-    float getWordFreq(string genre, string word){
+    double getWordFreq(string genre, string word){
         if((genreWords[genreIndex[genre]][word] + 0.0) / genreTotal[genreIndex[genre]] > 0) {
             return (genreWords[genreIndex[genre]][word] + 0.0) / genreTotal[genreIndex[genre]];
         } else {
             return 0.0;
         }
     }
-
 };
