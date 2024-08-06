@@ -6,6 +6,8 @@
 #include <set>
 #include <chrono>
 #include "genrePredictor.hpp"
+#include "topTen.hpp"
+#include "wordPerGenre.hpp"
 
 using namespace std;
 using namespace chrono;
@@ -246,6 +248,47 @@ int main() {
 
             cout << "Time Taken for Ordered Map Implementation: " << duration2.count() << " milliseconds." << endl;
             cout << endl;
+
+            continue;
+        } else if(option == 2) {
+            vector<string> genres = {"rb", "rock", "pop", "rap", "misc", "country"};
+
+            bool running = true;
+
+            while(running) {
+                string genre = "";
+                cout << "Please enter a genre: " << endl;
+                cin >> genre;
+
+                bool inGenres = false;
+
+                for (string genreVal: genres) {
+                    if (genre == genreVal) {
+                        inGenres = true;
+                    }
+                }
+
+                if (!inGenres) {
+                    cout << "Please enter a valid genre" << endl;
+                    cout << endl;
+                    continue;
+                }
+
+                topTenUnordered(unorderedFiltered, genre);
+
+                topTenOrdered(orderedFiltered, genre);
+
+                running = false;
+                continue;
+            }
+
+        } else if(option == 3) {
+            string word = "";
+            cout << "Please enter a word: " << endl;
+            cin >> word;
+
+            wordPerGenreUnordered(unordered, word);
+            wordPerGenreOrdered(ordered, word);
 
             continue;
         }
