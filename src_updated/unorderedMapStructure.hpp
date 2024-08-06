@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -12,7 +14,7 @@ private:
     //total number of words for each genre by index
     vector<int> genreTotal;
 
-    //stores maps for each genre that map words to their number of occurrences 
+    //stores maps for each genre that map words to their number of occurrences
     vector<unordered_map<string, int>> genreWords;
 
 public:
