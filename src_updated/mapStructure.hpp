@@ -14,7 +14,7 @@ private:
     //total number of words for each genre by index
     vector<int> genreTotal;
 
-    //stores maps for each genre that map words to their number of occurrences 
+    //stores maps for each genre that map words to their number of occurrences
     vector<map<string, int>> genreWords;
 
 public:
@@ -51,6 +51,14 @@ public:
         return ans;
     }
 
+    map<string, int> getIndex() {
+        return genreIndex;
+    }
+
+    vector<map<string, int>> getWords() {
+        return genreWords;
+    }
+
     //Takes a genre as a parameter and returns the total number of words in the genre's songs.
     int getTotal(string genre){
         if(genreTotal[genreIndex[genre]] > 0) {
@@ -70,11 +78,12 @@ public:
     }
 
     //Takes a genre and a word as a parameter and returns the frequency of the word in the genre's songs.
-    double getWordFreq(string genre, string word){
+    float getWordFreq(string genre, string word){
         if((genreWords[genreIndex[genre]][word] + 0.0) / genreTotal[genreIndex[genre]] > 0) {
             return (genreWords[genreIndex[genre]][word] + 0.0) / genreTotal[genreIndex[genre]];
         } else {
             return 0.0;
         }
     }
+
 };
