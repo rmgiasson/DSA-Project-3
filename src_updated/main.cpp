@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -258,7 +257,7 @@ int main() {
 
             while(running) {
                 string genre = "";
-                cout << "Please enter a genre: " << endl;
+                cout << "Please enter a genre. (Valid genres - rb, rock, rap, pop, misc, country): " << endl;
                 cin >> genre;
 
                 bool inGenres = false;
