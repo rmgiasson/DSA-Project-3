@@ -118,6 +118,7 @@ doesn't
 doing
 done
 don't
+dont
 down
 downwards
 due
@@ -222,6 +223,8 @@ ie
 if
 i'll
 i'm
+im
+id
 immediate
 immediately
 importance
