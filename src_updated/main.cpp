@@ -6,7 +6,7 @@
 #include <set>
 #include <chrono>
 #include "genrePredictor.hpp"
-
+//#include "test.cpp"
 using namespace std;
 using namespace chrono;
 
@@ -199,25 +199,25 @@ int main() {
         cin.ignore();               // Clear any extra input left in the buffer
 
         if (y.size() != 1) {
-            cout << "Please enter an integer between 1 and 4111" << endl;
+            cout << "Please enter an integer between 1 and 4" << endl;
             continue;
         }
 
         if (!isdigit(y[0])) {
-            cout << "Please enter an integer between 1 and 4222" << endl;
+            cout << "Please enter an integer between 1 and 4" << endl;
             continue;
         }
 
         int option = stoi(y);
         if (option < 1 || option > 4) {
-            cout << "Please enter an integer between 1 and 4333" << endl;
+            cout << "Please enter an integer between 1 and 4" << endl;
             continue;
         } else if (option == 4) {
             cout << "Program ended." << endl;
             break;
         } else if (option == 1) {
             string x, temp;
-            cout << "Enter song lyrics to be analyzed: " << endl;
+            cout << "Enter song lyrics to be analyzed (press enter 3 times after lyrics are entered): " << endl;
 
             while (true) {
                 cin.ignore();
