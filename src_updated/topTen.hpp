@@ -1,21 +1,25 @@
+#pragma once
+
 #include <bits/stdc++.h>
 #include <algorithm>
 #include <string>
 #include <vector>
 #include <chrono>
+#include "unorderedMapStructure.hpp"
+#include "mapStructure.hpp"
 
-
-using namespace std::chrono;
+using namespace std;
+using namespace chrono;
 
 bool cmp(pair<string, int>& a,
-        pair<string, int>& b)
+         pair<string, int>& b)
 {
     return a.second < b.second;
 }
 
 void topTenUnordered(UnorderedMapStructure umap, string genre) {
     auto start = high_resolution_clock::now();
- //get the frequency of every word in the given genre
+    //get the frequency of every word in the given genre
     //get the index of the genre for words vector
 
     int genreIndex = 0;
@@ -42,14 +46,17 @@ void topTenUnordered(UnorderedMapStructure umap, string genre) {
 
     // Print the sorted value
     cout << "The top 10 words in the " << genre << " genre are (Unordered): " << endl;
+    cout << endl;
     int count = 0;
     for (auto it = A.rbegin(); it != A.rend() && count < 10; ++it, ++count) {
-        cout << it->first << " appears " << it->second << " times." <<endl;
+        cout << it->first << " appears " << it->second << " times." << endl;
     }
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(stop - start);
 
+    cout << endl;
     cout << "This function took " << duration.count() << " milliseconds." << endl;
+    cout << endl;
 }
 
 void topTenOrdered(MapStructure omap, string genre) {
@@ -82,12 +89,15 @@ void topTenOrdered(MapStructure omap, string genre) {
 
     // Print the sorted value
     cout << "The top 10 words in the " << genre << " genre are (Standard): " << endl;
+    cout << endl;
     int count = 0;
     for (auto it = A.rbegin(); it != A.rend() && count < 10; ++it, ++count) {
-        cout << it->first << " appears " << it->second << " times" <<endl;
+        cout << it->first << " appears " << it->second << " times" << endl;
     }
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(stop - start);
 
+    cout << endl;
     cout << "This function took " << duration.count() << " milliseconds." << endl;
+    cout << endl;
 }
