@@ -5,10 +5,8 @@
 #include <vector>
 #include <set>
 #include "genrePredictor.hpp"
+//#include "test.cpp"
 using namespace std;
-
-// The stopwords from ../resources/stopwords.txt are from the default stopwords list on https://www.ranks.nl/stopwords
-
 
 int main() {
     ifstream file("../resources/dfnew.csv");
@@ -134,8 +132,6 @@ int main() {
         }
     }
 
-
-
     file.close();
 
     file.open("../resources/dfnew.csv");
@@ -143,7 +139,11 @@ int main() {
 
     UnorderedMapStructure unorderedFiltered;
 
+    vector<Song> songs;
+
     for(int i = 0; i < 10000; i++){
+        Song currSong;
+
         getline(file, line);
         stringstream ss(line);
         string genre;
@@ -155,6 +155,8 @@ int main() {
                 getline(ss, dummy, ',');
         }
         unorderedFiltered.addGenre(genre);
+
+        currSong.genre = genre;
         while(getline(ss, dummy, ' ')){
             string word = "";
             for(char c : dummy){
@@ -175,21 +177,32 @@ int main() {
             if(commonStopwords.count(word) == 0) {     // If word not in set of stopwords, add to map
                 unorderedFiltered.addWord(genre, word);
             }
+
+            currSong.words.push_back(word);
         }
+        songs.push_back(currSong);
     }
 
-
     file.close();
-    cout << ordered.getWordFreq("pop", "wow") << endl;
-    cout << unordered.getWordFreq("pop", "wow") << endl;
 
 //    string x;
 //    cout << "Enter song lyrics to be analyzed: " << endl;
 //    cin >> x;
 
-//    cout << endl;
-//    cout << "Predicted genre unordered filtered: " << calculateGenreUnordered(x, unorderedFiltered) << endl;
-//    cout << endl;
+    unordered_map<string, double> idfUnordered = computeIDFUnordered(songs);
+
+    map<string, double> idfOrdered = computeIDFOrdered(songs);
+
+    //// Write menu code here
+
+
+
+
+
+
+
+
 
     return 0;
 }
+
