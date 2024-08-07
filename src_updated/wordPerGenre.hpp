@@ -34,6 +34,7 @@ void wordPerGenreUnordered(UnorderedMapStructure umap, string word) {
 }
 
 void wordPerGenreOrdered(MapStructure omap, string word) {
+    //start function timer
     auto start = high_resolution_clock::now();
 
     //look at each genre
