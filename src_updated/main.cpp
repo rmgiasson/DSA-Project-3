@@ -5,7 +5,7 @@
 #include <vector>
 #include <set>
 #include <chrono>
-#include "genrePredictor.hpp"
+#include "genrePredictor.cpp"
 #include "topTen.hpp"
 #include "wordPerGenre.hpp"
 
