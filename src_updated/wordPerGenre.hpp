@@ -11,6 +11,7 @@ using namespace std;
 using namespace chrono;
 
 void wordPerGenreUnordered(UnorderedMapStructure umap, string word) {
+    //start function timer
     auto start = high_resolution_clock::now();
 
     //look at each genre
