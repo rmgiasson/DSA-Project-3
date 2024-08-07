@@ -17,6 +17,7 @@ bool cmp(pair<string, int>& a,
 }
 
 void topTenUnordered(UnorderedMapStructure umap, string genre) {
+    //start function timer
     auto start = high_resolution_clock::now();
     //get the frequency of every word in the given genre
     //get the index of the genre for words vector
@@ -59,6 +60,7 @@ void topTenUnordered(UnorderedMapStructure umap, string genre) {
 }
 
 void topTenOrdered(MapStructure omap, string genre) {
+    //start function timer
     auto start = high_resolution_clock::now();
 
     //get the frequency of every word in the given genre
