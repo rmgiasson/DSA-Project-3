@@ -6,6 +6,7 @@
 #include <set>
 #include <chrono>
 #include "genrePredictor.cpp"
+#include "genrePredictor.hpp"
 #include "topTen.hpp"
 #include "wordPerGenre.hpp"
 
